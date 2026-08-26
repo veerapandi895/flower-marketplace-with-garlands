@@ -1,0 +1,130 @@
+/* ===========================================================
+   Bloomcycle Footer
+   =========================================================== */
+.bc-footer {
+  background: #14251c;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 64px;
+  padding: 56px 0 0;
+}
+
+.bc-footer__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.bc-footer__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.bc-footer__brand {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.bc-footer__desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 18px;
+  max-width: 320px;
+}
+
+.bc-footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.bc-footer__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.bc-footer__social-icon:hover {
+  background: #198754;
+  transform: translateY(-2px);
+}
+
+.bc-footer__heading {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+
+.bc-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bc-footer__links a {
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+  font-size: 13.5px;
+  transition: color 0.18s ease;
+}
+
+.bc-footer__links a:hover {
+  color: #ffffff;
+}
+
+.bc-footer__contact {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 16px 0 0;
+}
+
+.bc-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 0;
+  text-align: center;
+}
+
+.bc-footer__bottom p {
+  margin: 0;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===========================================================
+   Responsive
+   =========================================================== */
+@media (max-width: 900px) {
+  .bc-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+  }
+
+  .bc-footer__col--brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .bc-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bc-footer__col--brand {
+    grid-column: span 1;
+  }
+}

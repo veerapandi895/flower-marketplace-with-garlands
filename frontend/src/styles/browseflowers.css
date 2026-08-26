@@ -1,0 +1,320 @@
+/* ===========================================================
+   Bloomcycle Browse Flowers
+   =========================================================== */
+.bc-browse {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 60px;
+}
+
+.bc-browse__hero {
+  background: linear-gradient(135deg, #e8f5ee, #fdf3f8);
+  border-radius: 20px;
+  padding: 36px 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bc-browse__hero h1 {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 8px;
+}
+
+.bc-browse__hero p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+}
+
+.bc-browse__banner {
+  background: #fff6e0;
+  border: 1px solid #f4e4c8;
+  color: #8a6500;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* ===========================================================
+   Search bar
+   =========================================================== */
+.bc-browse__search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.bc-browse__search-input {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1.5px solid #e9ecef;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.18s ease;
+}
+
+.bc-browse__search-input:focus {
+  border-color: #198754;
+}
+
+.bc-browse__search-btn {
+  background: #198754;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.bc-browse__search-btn:hover {
+  background: #146c43;
+}
+
+/* ===========================================================
+   Layout
+   =========================================================== */
+.bc-browse__layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* ===========================================================
+   Sidebar (desktop)
+   =========================================================== */
+.bc-browse__sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #eef1ef;
+  border-radius: 16px;
+  padding: 20px;
+  position: sticky;
+  top: 90px;
+}
+
+.bc-browse__sidebar-title {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 16px;
+}
+
+.bc-filter-group {
+  margin-bottom: 18px;
+}
+
+.bc-filter-group__label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.bc-filter-select,
+.bc-filter-input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #e9ecef;
+  font-size: 13.5px;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.18s ease;
+}
+
+.bc-filter-select:focus,
+.bc-filter-input:focus {
+  border-color: #198754;
+}
+
+.bc-filter-group__range {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6c757d;
+}
+
+.bc-filter-clear {
+  width: 100%;
+  background: none;
+  border: 1.5px solid #e83e8c;
+  color: #e83e8c;
+  border-radius: 999px;
+  padding: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.bc-filter-clear:hover {
+  background: #fdeef4;
+}
+
+/* ===========================================================
+   Mobile drawer
+   =========================================================== */
+.bc-browse__drawer {
+  display: none;
+}
+
+.bc-browse__drawer.is-open {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+}
+
+.bc-browse__drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.bc-browse__drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 82%;
+  max-width: 340px;
+  height: 100%;
+  background: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+  animation: bc-drawer-in 0.22s ease;
+}
+
+@keyframes bc-drawer-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.bc-browse__drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.bc-browse__drawer-header h3 {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bc-browse__drawer-header button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.bc-browse__drawer-apply {
+  width: 100%;
+  background: #198754;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* ===========================================================
+   Results
+   =========================================================== */
+.bc-browse__results {
+  flex: 1;
+  min-width: 0;
+}
+
+.bc-browse__results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bc-browse__results-count {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.bc-browse__results-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bc-browse__sort {
+  width: 180px;
+}
+
+.bc-browse__filter-toggle {
+  display: none;
+  background: #198754;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bc-browse__loading,
+.bc-browse__empty {
+  color: #6c757d;
+  font-size: 14px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* ===========================================================
+   Responsive
+   =========================================================== */
+@media (max-width: 900px) {
+  .bc-browse__sidebar {
+    display: none;
+  }
+
+  .bc-browse__filter-toggle {
+    display: inline-block;
+  }
+
+  .bc-browse__sort {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bc-browse {
+    padding: 16px 16px 40px;
+  }
+
+  .bc-browse__hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .bc-browse__search {
+    flex-direction: column;
+  }
+}

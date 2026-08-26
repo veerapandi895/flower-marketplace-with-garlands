@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* ===========================================================
+   Bloomcycle Design Tokens
+   =========================================================== */
+:root {
+  --bc-primary: #198754;
+  --bc-primary-dark: #146c43;
+  --bc-primary-soft: #e8f5ee;
+  --bc-secondary: #e83e8c;
+  --bc-bg: #f8faf9;
+  --bc-card: #ffffff;
+  --bc-text: #212529;
+  --bc-muted: #6c757d;
+  --bc-border: #e9ecef;
+  --bc-radius: 12px;
+  --bc-radius-sm: 8px;
+  --bc-shadow: 0 2px 10px rgba(16, 24, 20, 0.06);
+  --bc-shadow-md: 0 8px 24px rgba(16, 24, 20, 0.10);
+  --bc-font-display: 'Poppins', 'Segoe UI', sans-serif;
+  --bc-font-body: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* ===========================================================
+   Navbar shell
+   =========================================================== */
+.bc-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--bc-font-body);
+  background: var(--bc-card);
+  box-shadow: var(--bc-shadow);
+}
+
+.bc-navbar__top {
+  background: var(--bc-card);
+  border-bottom: 1px solid var(--bc-border);
+}
+
+.bc-navbar__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ===========================================================
+   Brand
+   =========================================================== */
+.bc-navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.bc-navbar__logo-mark {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.bc-navbar__shop-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bc-primary-soft);
+}
+
+.bc-navbar__brand-name {
+  font-family: var(--bc-font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--bc-primary);
+  letter-spacing: -0.01em;
+}
+
+/* ===========================================================
+   Search
+   =========================================================== */
+.bc-navbar__search {
+  flex: 1;
+  max-width: 560px;
+}
+
+.bc-navbar__search-mobile {
+  display: none;
+  padding: 0 16px 12px;
+}
+
+/* ===========================================================
+   Actions (right side)
+   =========================================================== */
+.bc-navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.bc-navbar__icon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--bc-text);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.bc-navbar__icon-btn:hover {
+  background: var(--bc-primary-soft);
+  color: var(--bc-primary);
+  transform: translateY(-1px);
+}
+
+.bc-navbar__bell {
+  padding: 0;
+}
+
+/* ===========================================================
+   Profile dropdown
+   =========================================================== */
+.bc-navbar__profile {
+  position: relative;
+  margin-left: 4px;
+}
+
+.bc-navbar__profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px 6px 6px;
+  border-radius: 999px;
+  transition: background 0.18s ease;
+}
+
+.bc-navbar__profile-btn:hover {
+  background: var(--bc-bg);
+}
+
+.bc-navbar__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bc-primary);
+  color: #fff;
+  font-family: var(--bc-font-display);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bc-navbar__profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.bc-navbar__profile-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--bc-text);
+}
+
+.bc-navbar__profile-role {
+  font-size: 11px;
+  color: var(--bc-muted);
+  text-transform: capitalize;
+}
+
+.bc-navbar__chevron {
+  color: var(--bc-muted);
+}
+
+.bc-navbar__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bc-card);
+  border-radius: var(--bc-radius);
+  box-shadow: var(--bc-shadow-md);
+  border: 1px solid var(--bc-border);
+  min-width: 200px;
+  padding: 14px;
+  animation: bc-dropdown-in 0.16s ease;
+  z-index: 1100;
+}
+
+@keyframes bc-dropdown-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bc-navbar__dropdown-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--bc-border);
+}
+
+.bc-navbar__role-badge {
+  align-self: flex-start;
+  background: var(--bc-primary-soft);
+  color: var(--bc-primary-dark);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.bc-navbar__dropdown-logout {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--bc-border);
+  border-radius: var(--bc-radius-sm);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--bc-secondary);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.bc-navbar__dropdown-logout:hover {
+  background: #fdeef4;
+  border-color: var(--bc-secondary);
+}
+
+/* ===========================================================
+   Auth buttons (guest)
+   =========================================================== */
+.bc-navbar__auth-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bc-btn {
+  font-family: var(--bc-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.bc-btn--ghost {
+  color: var(--bc-primary);
+  border: 1.5px solid var(--bc-primary);
+  background: transparent;
+}
+
+.bc-btn--ghost:hover {
+  background: var(--bc-primary-soft);
+}
+
+.bc-btn--primary {
+  color: #fff;
+  background: var(--bc-primary);
+  border: 1.5px solid var(--bc-primary);
+}
+
+.bc-btn--primary:hover {
+  background: var(--bc-primary-dark);
+  border-color: var(--bc-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* ===========================================================
+   Hamburger (mobile only)
+   =========================================================== */
+.bc-navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.bc-navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--bc-text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.bc-navbar__hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.bc-navbar__hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.bc-navbar__hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===========================================================
+   Links row
+   =========================================================== */
+.bc-navbar__links {
+  background: var(--bc-primary);
+}
+
+.bc-navbar__link-list {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bc-navbar__link {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 14px;
+  position: relative;
+  transition: color 0.18s ease;
+}
+
+.bc-navbar__link::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease;
+}
+
+.bc-navbar__link:hover {
+  color: #fff;
+}
+
+.bc-navbar__link:hover::after {
+  transform: scaleX(1);
+}
+
+.bc-navbar__link--mobile-only {
+  display: none;
+}
+
+.bc-navbar__mobile-logout {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #ffd7e6;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+/* ===========================================================
+   Responsive: tablet & mobile
+   =========================================================== */
+@media (max-width: 991px) {
+  .bc-navbar__search {
+    display: none;
+  }
+
+  .bc-navbar__search-mobile {
+    display: block;
+  }
+
+  .bc-navbar__profile-text {
+    display: none;
+  }
+
+  .bc-navbar__hamburger {
+    display: flex;
+  }
+
+  .bc-navbar__links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .bc-navbar__links.is-open {
+    max-height: 640px;
+  }
+
+  .bc-navbar__link-list {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 16px 16px;
+    gap: 0;
+  }
+
+  .bc-navbar__link {
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .bc-navbar__link::after {
+    display: none;
+  }
+
+  .bc-navbar__link--mobile-only {
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .bc-navbar__auth-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .bc-navbar__container {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .bc-navbar__brand-name {
+    font-size: 18px;
+  }
+}

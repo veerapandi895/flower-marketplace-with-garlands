@@ -1,0 +1,84 @@
+body {
+  background-color: #fafafa;
+}
+
+.card {
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+/* Phase 14: modern cards, hover effects, animations, responsive polish */
+
+.btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+a.text-decoration-none .card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade/slide-in animation for landing page sections and card grids */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.fade-in-up-delay-1 { animation-delay: 0.08s; }
+.fade-in-up-delay-2 { animation-delay: 0.16s; }
+.fade-in-up-delay-3 { animation-delay: 0.24s; }
+
+/* Notification dropdown lives inside the collapsible mobile nav on small
+   screens - keep it usable instead of overflowing the viewport. */
+@media (max-width: 991.98px) {
+  .navbar .position-relative.me-3 .dropdown-menu {
+    width: 100% !important;
+    right: auto !important;
+  }
+}
+
+/* Global search bar: full width on phones/tablets so it doesn't get
+   squeezed between the brand and the hamburger toggle. */
+@media (max-width: 991.98px) {
+  .navbar > .container {
+    flex-wrap: wrap;
+  }
+  .navbar .mx-3 {
+    order: 3;
+    width: 100%;
+    margin: 0.5rem 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Hero and section spacing tighten up on small screens */
+@media (max-width: 575.98px) {
+  .display-5 {
+    font-size: 1.8rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+}

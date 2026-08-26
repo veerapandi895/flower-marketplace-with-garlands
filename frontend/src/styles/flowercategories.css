@@ -1,0 +1,135 @@
+/* ===========================================================
+   Bloomcycle Flower Categories
+   =========================================================== */
+.bc-categories {
+  background: #f8faf9;
+  padding: 48px 0;
+}
+
+.bc-categories__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.bc-categories__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.bc-categories__eyebrow {
+  display: inline-block;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #198754;
+  margin-bottom: 6px;
+}
+
+.bc-categories__title {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+}
+
+/* ===========================================================
+   Category row
+   =========================================================== */
+.bc-categories__row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.bc-category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  width: 140px;
+}
+
+.bc-category-card__ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #198754, #e83e8c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(16, 24, 20, 0.08);
+}
+
+.bc-category-card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+.bc-category-card__name {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #212529;
+  transition: color 0.2s ease;
+}
+
+.bc-category-card:hover .bc-category-card__ring {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 24px rgba(16, 24, 20, 0.14);
+}
+
+.bc-category-card:hover .bc-category-card__name {
+  color: #198754;
+}
+
+/* ===========================================================
+   Responsive
+   =========================================================== */
+@media (max-width: 768px) {
+  .bc-categories {
+    padding: 36px 0;
+  }
+
+  .bc-categories__row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .bc-categories__row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bc-category-card {
+    width: 96px;
+    flex-shrink: 0;
+  }
+
+  .bc-category-card__ring {
+    width: 88px;
+    height: 88px;
+  }
+
+  .bc-category-card__name {
+    font-size: 13px;
+  }
+
+  .bc-categories__title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,254 @@
+/* ===========================================================
+   Bloomcycle Hero Slider
+   =========================================================== */
+.bc-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.bc-hero .carousel-item img {
+  height: 560px;
+  object-fit: cover;
+  filter: saturate(1.05);
+}
+
+/* Dark gradient overlay for text readability */
+.bc-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 20, 15, 0.72) 0%,
+    rgba(10, 20, 15, 0.42) 45%,
+    rgba(10, 20, 15, 0.15) 75%
+  );
+}
+
+/* ===========================================================
+   Caption / copy block
+   =========================================================== */
+.bc-hero__caption {
+  left: 6%;
+  right: auto;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  max-width: 560px;
+  padding: 0;
+}
+
+.bc-hero__eyebrow {
+  display: inline-block;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(25, 135, 84, 0.85);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.bc-hero__eyebrow--accent {
+  background: rgba(232, 62, 140, 0.85);
+}
+
+.bc-hero__caption h1 {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.bc-hero__caption p {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 28px;
+  max-width: 460px;
+  line-height: 1.5;
+}
+
+/* ===========================================================
+   CTA button
+   =========================================================== */
+.bc-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #198754;
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(25, 135, 84, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.bc-hero__cta:hover {
+  background: #146c43;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(25, 135, 84, 0.45);
+}
+
+.bc-hero__cta svg {
+  transition: transform 0.2s ease;
+}
+
+.bc-hero__cta:hover svg {
+  transform: translateX(3px);
+}
+
+.bc-hero__cta--accent {
+  background: #e83e8c;
+  box-shadow: 0 8px 20px rgba(232, 62, 140, 0.35);
+}
+
+.bc-hero__cta--accent:hover {
+  background: #c72e73;
+  box-shadow: 0 10px 26px rgba(232, 62, 140, 0.45);
+}
+
+/* ===========================================================
+   Arrows
+   =========================================================== */
+.bc-hero__arrow {
+  width: 46px;
+  height: 46px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  opacity: 1;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.bc-hero__arrow--prev {
+  left: 24px;
+}
+
+.bc-hero__arrow--next {
+  right: 24px;
+}
+
+.bc-hero__arrow:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.06);
+}
+
+.bc-hero__arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #212529;
+}
+
+/* ===========================================================
+   Indicators
+   =========================================================== */
+.bc-hero__indicators {
+  bottom: 22px;
+  gap: 8px;
+}
+
+.bc-hero__indicators button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.55;
+  background: #ffffff;
+  transition: width 0.25s ease, opacity 0.25s ease;
+}
+
+.bc-hero__indicators button.active {
+  width: 24px;
+  border-radius: 999px;
+  opacity: 1;
+  background: #ffffff;
+}
+
+/* ===========================================================
+   Responsive
+   =========================================================== */
+@media (max-width: 991px) {
+  .bc-hero .carousel-item img {
+    height: 440px;
+  }
+
+  .bc-hero__caption h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bc-hero .carousel-item img {
+    height: 340px;
+  }
+
+  .bc-hero__caption {
+    left: 5%;
+    right: 5%;
+    max-width: none;
+  }
+
+  .bc-hero__caption h1 {
+    font-size: 1.8rem;
+  }
+
+  .bc-hero__caption p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .bc-hero__cta {
+    padding: 11px 20px;
+    font-size: 14px;
+  }
+
+  .bc-hero__arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .bc-hero__arrow--prev {
+    left: 10px;
+  }
+
+  .bc-hero__arrow--next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bc-hero .carousel-item img {
+    height: 280px;
+  }
+
+  .bc-hero__eyebrow {
+    font-size: 10px;
+    padding: 4px 10px;
+    margin-bottom: 12px;
+  }
+
+  .bc-hero__caption h1 {
+    font-size: 1.4rem;
+  }
+
+  .bc-hero__caption p {
+    display: none;
+  }
+}

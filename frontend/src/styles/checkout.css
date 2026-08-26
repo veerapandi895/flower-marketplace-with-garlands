@@ -1,0 +1,159 @@
+/* ===========================================================
+   Bloomcycle Checkout
+   =========================================================== */
+.bc-checkout {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.bc-checkout__card {
+  background: #ffffff;
+  border: 1px solid #eef1ef;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(16, 24, 20, 0.06);
+}
+
+.bc-checkout__title {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 24px;
+}
+
+.bc-checkout__error {
+  background: #fdeaec;
+  color: #a4243b;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  margin-bottom: 20px;
+}
+
+/* ===========================================================
+   Steps
+   =========================================================== */
+.bc-checkout__step {
+  margin-bottom: 28px;
+}
+
+.bc-checkout__step-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.bc-checkout__step-number {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #198754;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bc-checkout__step-header h2 {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+/* ===========================================================
+   Inputs
+   =========================================================== */
+.bc-checkout__textarea,
+.bc-checkout__input {
+  width: 100%;
+  border: 1.5px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.18s ease;
+}
+
+.bc-checkout__textarea:focus,
+.bc-checkout__input:focus {
+  border-color: #198754;
+}
+
+/* ===========================================================
+   Payment options
+   =========================================================== */
+.bc-checkout__payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bc-checkout__payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #212529;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.bc-checkout__payment-option input {
+  accent-color: #198754;
+}
+
+.bc-checkout__payment-option.is-selected {
+  border-color: #198754;
+  background: #e8f5ee;
+}
+
+/* ===========================================================
+   Submit
+   =========================================================== */
+.bc-checkout__submit-btn {
+  width: 100%;
+  background: #198754;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.bc-checkout__submit-btn:hover:not(:disabled) {
+  background: #146c43;
+}
+
+.bc-checkout__submit-btn:disabled {
+  background: #c9ccca;
+  cursor: not-allowed;
+}
+
+/* ===========================================================
+   Responsive
+   =========================================================== */
+@media (max-width: 480px) {
+  .bc-checkout {
+    padding: 24px 16px 40px;
+  }
+
+  .bc-checkout__card {
+    padding: 22px;
+  }
+}

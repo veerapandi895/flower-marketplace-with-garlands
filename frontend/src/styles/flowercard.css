@@ -1,0 +1,248 @@
+/* ===========================================================
+   Bloomcycle Flower Card
+   =========================================================== */
+.bc-flower-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(16, 24, 20, 0.06);
+  border: 1px solid #eef1ef;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.bc-flower-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(16, 24, 20, 0.12);
+}
+
+/* ===========================================================
+   Media
+   =========================================================== */
+.bc-flower-card__media {
+  position: relative;
+  overflow: hidden;
+  height: 190px;
+  background: #f1f4f2;
+}
+
+.bc-flower-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.bc-flower-card:hover .bc-flower-card__image {
+  transform: scale(1.06);
+}
+
+.bc-flower-card__wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: #e83e8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.bc-flower-card__wishlist:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+.bc-flower-card__stage {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.bc-flower-card__discount {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #e83e8c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ===========================================================
+   Body
+   =========================================================== */
+.bc-flower-card__body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bc-flower-card__name {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.bc-flower-card__name a {
+  color: #212529;
+  text-decoration: none;
+}
+
+.bc-flower-card__name a:hover {
+  color: #198754;
+}
+
+.bc-flower-card__seller {
+  font-size: 12.5px;
+  color: #6c757d;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.bc-flower-card__seller:hover {
+  color: #198754;
+}
+
+.bc-flower-card__rating {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #b8860b;
+  margin-bottom: 6px;
+}
+
+.bc-flower-card__quality {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.bc-flower-card__quality.is-good {
+  background: #e8f5ee;
+  color: #146c43;
+}
+
+.bc-flower-card__quality.is-mid {
+  background: #fff6e0;
+  color: #8a6500;
+}
+
+.bc-flower-card__quality.is-low {
+  background: #fdeaec;
+  color: #a4243b;
+}
+
+.bc-flower-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.bc-flower-card__price {
+  font-size: 19px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.bc-flower-card__price-original {
+  font-size: 13px;
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+.bc-flower-card__unit {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.bc-flower-card__stock {
+  font-size: 12px;
+  color: #6c757d;
+  margin: 0 0 12px;
+}
+
+/* ===========================================================
+   Actions
+   =========================================================== */
+.bc-flower-card__actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.bc-flower-card__add-btn {
+  flex: 1;
+  background: #198754;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.bc-flower-card__add-btn:hover:not(:disabled) {
+  background: #146c43;
+  transform: translateY(-1px);
+}
+
+.bc-flower-card__add-btn:disabled {
+  background: #c9ccca;
+  cursor: not-allowed;
+}
+
+.bc-flower-card__view-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #198754;
+  color: #198754;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.18s ease;
+}
+
+.bc-flower-card__view-btn:hover {
+  background: #e8f5ee;
+  color: #146c43;
+}
+
+@media (max-width: 480px) {
+  .bc-flower-card__actions {
+    flex-direction: column;
+  }
+}
