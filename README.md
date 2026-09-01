@@ -1,12 +1,52 @@
-# 🌸 Bloomcycle
+# 🌸 Bloomcycle — Flower Marketplace with Garlands
 
-A full-stack online flower marketplace connecting **Admins**, **Sellers**, and **Customers** — with dynamic freshness-based pricing, festival offers, waste reduction tracking, and more.
+> A full-stack e-commerce marketplace designed for buying and selling fresh flowers and garlands online.
 
-## Tech Stack
+**Bloomcycle** connects **Customers, Sellers, and Administrators** through a single digital marketplace.
 
-**Backend:** Java 21, Spring Boot 3, Spring Security (JWT), Spring Data JPA/Hibernate, MySQL, Maven
-**Frontend:** React 18, React Router, Axios, Bootstrap 5
-**Deployment:** Docker, Docker Compose
+Customers can discover flowers and garlands, compare prices, manage their cart, place orders, and track purchases. Sellers can manage their shops, products, inventory, pricing, and orders, while administrators manage the overall marketplace.
+
+### 🎯 Why Bloomcycle?
+
+Unlike traditional e-commerce products, flowers are **highly perishable** and their prices can change based on freshness, demand, season, festivals, and market conditions.
+
+Bloomcycle addresses these challenges with:
+
+* 🌸 **Freshness-based Dynamic Pricing**
+* 📈 **Market Price Reference**
+* 🎉 **Festival Offers & Pricing**
+* 🏪 **Multi-Seller Marketplace**
+* 📦 **Inventory & Stock Management**
+* ♻️ **Flower Waste Reduction Tracking**
+* 🛒 **Multi-Seller Cart & Checkout**
+* 📊 **Admin & Seller Analytics**
+
+The goal is to provide a practical digital platform that helps **customers buy fresh flowers conveniently while enabling sellers to manage their flower business efficiently and reduce product wastage.**
+
+
+## 🛠️ Tech Stack
+
+| Layer               | Technologies                                 |
+| ------------------- | -------------------------------------------- |
+| **Frontend**        | React 18, React Router, Axios, Bootstrap 5   |
+| **Backend**         | Java 21, Spring Boot 3, Spring Security, JWT |
+| **Database**        | MySQL 8, Spring Data JPA, Hibernate          |
+| **Build Tools**     | Maven, npm                                   |
+| **Deployment**      | Docker, Docker Compose                       |
+| **Version Control** | Git, GitHub                                  |
+
+### 🔧 Core Technologies
+
+* **Java 21** — Backend development
+* **Spring Boot 3** — REST API and application framework
+* **Spring Security + JWT** — Authentication and role-based authorization
+* **Spring Data JPA / Hibernate** — Database persistence
+* **MySQL 8** — Relational database
+* **React 18** — Frontend application
+* **React Router** — Client-side routing
+* **Axios** — Frontend API communication
+* **Bootstrap 5** — Responsive UI
+* **Docker & Docker Compose** — Containerization and deployment
 
 ## Project Structure
 
