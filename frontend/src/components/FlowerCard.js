@@ -39,8 +39,7 @@ export default function FlowerCard({ flower, onAddToCart, onWishlist }) {
 
     try {
 
-      await api.post(`/customer/wishlist/flowers/${flower.id}`);
-
+      await api.post(`/customer/wishlist/${flower.id}`);
       alert("Added to Wishlist ❤️");
 
     } catch (error) {
