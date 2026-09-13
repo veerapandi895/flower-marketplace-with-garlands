@@ -115,7 +115,7 @@ export default function SellerFlowers() {
           <ImageUploader
             images={form.images}
             onChange={(images) => setForm({ ...form, images })}
-            uploadEndpoint="/seller/uploads/flower-images"
+            uploadEndpoint="/cloudinary/upload"
             multiple
           />
         </div>
